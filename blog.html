@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        .image-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Toggle Button (Sandwich Icon) */
+        .menu-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1050;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -250px; /* Start hidden */
+            width: 250px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding-top: 60px;
+            transition: right 0.5s ease-in-out;
+            z-index: 1049;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-menu ul li {
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+        }
+
+        .nav-menu ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Show Navigation */
+        .nav-menu.show {
+            right: 0;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        /* Show Navigation */
+        .nav-menu.show {
+            right: 0;
+        }
+
+        .blog-post {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .blog-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .blog-date {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        .blog-content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Toggle Button -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="index.html" target="_self" >Home</a></li>
+            <li><a href="photos.html" target="_self" >Photos</a></li>
+            <li><a href="bio.html" target="_self" >Bio</a></li>
+            <li><a href="blog.html" target="_self" style="color: red;">Blog</a></li>
+            <li><a href="contact.html" target="_self">Contact</a></li>
+        </ul>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- grid layout for pictures -->
+    <div class="container mt-5" style="color: white;">
+        <h1 class="text-center mb-4">Photography Blog</h1>
+
+        <div class="blog-post">
+            <h2 class="blog-title">Capturing the Perfect Moment</h2>
+            <div class="blog-date">February 20, 2025</div>
+            <div class="blog-content">
+                <p>As a photographer, the key to great images lies in capturing the perfect moment. Whether it’s the fleeting expression of a subject or the right lighting during the golden hour, being patient and observant can make all the difference. In this post, I’ll share some tips on how to be in the right place at the right time.</p>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-title">The Art of Composition</h2>
+            <div class="blog-date">February 18, 2025</div>
+            <div class="blog-content">
+                <p>Composition is essential in photography. It’s the arrangement of elements within your frame that guides the viewer's eye. In this post, I’ll discuss techniques like the rule of thirds, leading lines, and framing to enhance your photographs and make them more engaging.</p>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-title">Post-Processing Tips for Photographers</h2>
+            <div class="blog-date">February 15, 2025</div>
+            <div class="blog-content">
+                <p>Post-processing is a crucial step in photography that allows you to enhance your images further. In this blog, I’ll share my favorite editing techniques using software like Adobe Lightroom and Photoshop, including color correction, cropping, and sharpening.</p>
+            </div>
+        </div>
+
+        <div class="social-icons text-center">
+            <h5>Follow me on:</h5>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const menu = document.getElementById("navMenu");
+
+        // Ensure the menu starts hidden
+        menu.classList.remove("show");
+
+        // Toggle menu on button click
+        document.querySelector(".menu-toggle").addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+    });
+
+    </script>
+    
+    
+    
+</body>
+</html>
